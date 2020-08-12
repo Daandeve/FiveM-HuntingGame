@@ -1,4 +1,4 @@
-﻿//using vSql;
+﻿using vSql;
 using System;
 using System.Collections.Generic;
 using CitizenFX.Core;
@@ -11,7 +11,7 @@ namespace HuntingGame
         public HuntingGame()
         {
             EventHandlers["onClientResourceStart"] += new Action<string>(OnClientResourceStart);
-            //vSql.Async.execute(query, parameters, callback)
+            new vSql.Async.execute(query, parameters, callback)
         }
 
         private void OnClientResourceStart(string resourceName)
